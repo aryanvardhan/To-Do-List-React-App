@@ -1,38 +1,111 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.list-container {
+  background-color: #F3A032;
+  height: 100vh;
   display: flex;
+  justify-content: center;
+}
+
+.list {
+  background-color: #00535E;
+  width: 300px;
+  height: 500px;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  margin-top: 100px;
+}
+
+.list-elements {
+  display: flex;
+  justify-content: flex-start;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.list-elements h1 {
+  font-family: 'Courier New', Courier, monospace;
+  font-size:x-large;
+  color: white;
+  margin: 15px;
+  margin-bottom: 10px;
+}
+
+.list-inputer input {
+  background-color: black;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 5px;
+  border: none;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.list-inputer button {
+  background-color: #F3A032;
+  padding: 5px;
+  border-radius: 8px;
+  font-weight: bolder;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.list-inputer button:hover {
+  background-color: #6D5104;
+  text-decoration: underline;
+}
+
+.todo-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-item {
+  margin: 10px;
+  width: 200px;
+  border: solid 2px white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #C5760D;
+}
+
+.completed-item {
+  background-color: #87DE25;
+  text-decoration: line-through;
+}
+
+.list-item p {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: larger;
+  color: white;
+  padding: 10px;
+}
+
+.icons {
+  border: solid 2px white;
+  display: flex;
+  align-items: center;
+  border-left: none;
+  border-right: none;
+}
+
+.icon {
+  margin: 5px;
+}
+
+.submit-edit-button {
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.submit-edit-button:hover {
+  background-color: #6D5104;
+  text-decoration: underline;
 }
