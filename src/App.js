@@ -21,7 +21,7 @@ const ListItem = (props) => {
       <AiFillEdit className='icon' onClick={() => props.editToDo(props.ToDoText.id)} />
       <input
         type='checkbox'
-        onClick={() => props.toggleCheckbox(props.ToDoText.id)}
+        onClick={() => props.toggleCheckbox(props.ToDoText)}
       />
     </div>
   </div>
@@ -73,14 +73,11 @@ const App = () => {
     setPrevEditToDoText("")
   }
 
-  const toggleCheckbox = (id) => {
-    ToDoTextArr.forEach( (ToDoText) => {
-      if(ToDoText.id === id){
-        ToDoText.completed = !ToDoText.completed;
-        setCompletedToggled(!CompleteToggled);
-      }
-    })
-  }
+  const toggleCheckbox = (ToDoText) => {
+    ToDoText.completed = !ToDoText.completed;
+    setCompletedToggled(!CompleteToggled);
+  };
+  
 
 
   return (
